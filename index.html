@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help &amp; Guide Center | AssistHub Online Services — Call +1 (888) 562-2563</title>
+<meta name="description" content="Free step-by-step help guides plus live phone support for account, device, email and software issues. Transparent pricing, no hidden fees. Call +1 (888) 562-2563.">
+<link rel="canonical" href="https://www.example.com/help-guide">
+
+<!-- Structured data: helps ad reviewers confirm business identity -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AssistHub Online Services",
+  "url": "https://www.example.com/",
+  "telephone": "+1-888-562-2563",
+  "email": "support@example.com",
+  "description": "Independent third-party online technical support and help guide service.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1200 Commerce Parkway, Suite 210",
+    "addressLocality": "Austin",
+    "addressRegion": "TX",
+    "postalCode": "78701",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-888-562-2563",
+    "contactType": "customer support",
+    "availableLanguage": "English",
+    "hoursAvailable": "Mo-Su 00:00-23:59"
+  }
+}
+</script>
+
+<style>
+  /* ---------- Tokens ---------- */
+  :root{
+    --navy:#0b2545;
+    --navy-2:#123a6b;
+    --blue:#1a5fb4;
+    --accent:#0a9a76;
+    --accent-dark:#078562;
+    --ink:#1b2430;
+    --muted:#5b6b7c;
+    --line:#e2e8f0;
+    --bg:#f5f8fc;
+    --white:#ffffff;
+    --warn:#fff6e5;
+    --warn-line:#f0c97a;
+    --radius:14px;
+    --shadow:0 6px 24px rgba(11,37,69,.08);
+    --shadow-lg:0 18px 44px rgba(11,37,69,.14);
+    --max:1140px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:var(--blue);}
+  h1,h2,h3,h4{line-height:1.22;color:var(--navy);margin:0 0 .5em;}
+  h1{font-size:clamp(1.9rem,4.4vw,3rem);letter-spacing:-.02em;}
+  h2{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.01em;}
+  h3{font-size:1.12rem;}
+  p{margin:0 0 1rem;}
+  .wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:20px;}
+  .sr-only{
+    position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+  }
+  .skip-link{
+    position:absolute;left:12px;top:-60px;z-index:999;
+    background:var(--navy);color:#fff;padding:10px 18px;border-radius:8px;
+    text-decoration:none;transition:top .2s;
+  }
+  .skip-link:focus{top:12px;}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;border-radius:999px;
+    font-weight:700;font-size:1rem;text-decoration:none;
+    border:2px solid transparent;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    font-family:inherit;
+  }
+  .btn:focus-visible{outline:3px solid #7fb2ff;outline-offset:3px;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn--primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(10,154,118,.28);}
+  .btn--primary:hover{background:var(--accent-dark);}
+  .btn--ghost{background:#fff;color:var(--navy);border-color:var(--line);box-shadow:var(--shadow);}
+  .btn--ghost:hover{border-color:#c3d3e6;}
+  .btn--dark{background:var(--navy);color:#fff;}
+  .btn--dark:hover{background:var(--navy-2);}
+  .btn--block{width:100%;justify-content:center;}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    background:var(--navy);
+    color:#d7e3f5;
+    font-size:.8rem;
+  }
+  .topbar__inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding-block:8px;flex-wrap:wrap;
+  }
+  .topbar__note{margin:0;max-width:640px;line-height:1.45;opacity:.9;}
+  .topbar__phone{color:#fff;text-decoration:none;white-space:nowrap;font-weight:600;}
+  .topbar__phone:hover{text-decoration:underline;}
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .header__inner{
+    display:flex;align-items:center;gap:20px;
+    padding-block:12px;
+  }
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;}
+  .brand__mark{
+    width:42px;height:42px;border-radius:11px;flex-shrink:0;
+    background:linear-gradient(135deg,var(--navy),var(--blue));
+    color:#fff;font-weight:800;font-size:.95rem;letter-spacing:.5px;
+    display:grid;place-items:center;
+  }
+  .brand__text{display:flex;flex-direction:column;line-height:1.2;}
+  .brand__text strong{color:var(--navy);font-size:1rem;}
+  .brand__text small{color:var(--muted);font-size:.74rem;letter-spacing:.02em;}
+
+  .nav{
+    display:flex;gap:26px;margin-left:auto;
+  }
+  .nav a{
+    color:var(--navy);text-decoration:none;font-weight:600;font-size:.93rem;
+    padding:6px 0;border-bottom:2px solid transparent;
+  }
+  .nav a:hover,.nav a:focus-visible{border-bottom-color:var(--accent);}
+
+  .btn--call{
+    background:var(--navy);color:#fff;padding:10px 20px;
+    border-radius:12px;box-shadow:0 6px 16px rgba(11,37,69,.22);
+    flex-shrink:0;
+  }
+  .btn--call:hover{background:var(--navy-2);}
+  .btn--call .btn__label{display:flex;flex-direction:column;line-height:1.15;text-align:left;}
+  .btn--call small{font-size:.66rem;font-weight:600;opacity:.8;letter-spacing:.05em;text-transform:uppercase;}
+  .btn--call .btn__label{font-size:.98rem;font-weight:800;letter-spacing:.01em;}
+  .phone-icon{width:19px;height:19px;flex-shrink:0;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(900px 420px at 82% -12%, rgba(26,95,180,.16), transparent 65%),
+      linear-gradient(180deg,#eef4fb 0%, #f7fafd 100%);
+    padding:clamp(44px,7vw,84px) 0 clamp(40px,6vw,68px);
+    border-bottom:1px solid var(--line);
+  }
+  .hero__grid{
+    display:grid;grid-template-columns:1.12fr .88fr;
+    gap:clamp(28px,5vw,58px);align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#e6f6f1;color:var(--accent-dark);
+    border:1px solid #bfe8db;
+    font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+    padding:6px 14px;border-radius:999px;margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);}
+  .hero p.lead{font-size:1.09rem;color:#3d4d5e;max-width:56ch;}
+  .hero__actions{display:flex;flex-wrap:wrap;gap:14px;margin:26px 0 18px;}
+  .hero__fine{
+    font-size:.83rem;color:var(--muted);margin:0;max-width:60ch;
+  }
+
+  /* Hero card */
+  .hero__card{
+    background:#fff;border:1px solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow-lg);padding:26px;
+  }
+  .hero__card h3{margin-bottom:4px;}
+  .hero__card .card-sub{font-size:.85rem;color:var(--muted);margin-bottom:18px;}
+  .callout{
+    display:flex;gap:12px;align-items:flex-start;
+    background:#e8f7f1;border:1px solid #bfe8db;border-radius:12px;
+    padding:14px 16px;margin-bottom:18px;
+  }
+  .callout strong{display:block;color:var(--navy);font-size:.94rem;}
+  .callout span{font-size:.85rem;color:#3d4d5e;}
+  .callout__num{
+    display:inline-block;margin-top:6px;
+    font-size:1.22rem;font-weight:800;color:var(--navy);
+    text-decoration:none;letter-spacing:.01em;
+  }
+  .callout__num:hover{text-decoration:underline;}
+  .mini-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;}
+  .mini-list li{
+    display:flex;gap:10px;align-items:flex-start;
+    font-size:.9rem;color:#33455a;
+  }
+  .tick{
+    flex-shrink:0;width:20px;height:20px;border-radius:50%;
+    background:#e6f6f1;color:var(--accent-dark);
+    display:grid;place-items:center;font-size:.7rem;font-weight:900;margin-top:2px;
+  }
+
+  /* ---------- Trust strip ---------- */
+  .trust{background:var(--navy);color:#cfe0f5;}
+  .trust__grid{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:18px;padding-block:22px;
+  }
+  .trust__item{display:flex;gap:11px;align-items:flex-start;}
+  .trust__item svg{flex-shrink:0;margin-top:3px;color:#5fd0ac;}
+  .trust__item strong{display:block;color:#fff;font-size:.92rem;}
+  .trust__item span{font-size:.79rem;opacity:.85;line-height:1.45;}
+
+  /* ---------- Sections ---------- */
+  .section{padding:clamp(48px,7vw,82px) 0;}
+  .section--alt{background:var(--bg);border-block:1px solid var(--line);}
+  .section__head{max-width:720px;margin-bottom:38px;}
+  .section__head.center{margin-inline:auto;text-align:center;}
+  .section__head p{color:var(--muted);margin:0;font-size:1.02rem;}
+
+  /* ---------- Topic cards ---------- */
+  .grid-3{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+  }
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;box-shadow:var(--shadow);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:#c9dcf2;}
+  .card__icon{
+    width:44px;height:44px;border-radius:11px;
+    background:#eaf2fc;color:var(--blue);
+    display:grid;place-items:center;margin-bottom:14px;
+  }
+  .card h3{margin-bottom:6px;font-size:1.03rem;}
+  .card p{font-size:.9rem;color:var(--muted);margin:0 0 12px;}
+  .card__link{
+    font-size:.87rem;font-weight:700;text-decoration:none;color:var(--blue);
+    display:inline-flex;align-items:center;gap:5px;
+  }
+  .card__link:hover{text-decoration:underline;}
+
+  /* ---------- Steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;counter-reset:step;}
+  .step{position:relative;padding-top:8px;}
+  .step__num{
+    counter-increment:step;
+    width:40px;height:40px;border-radius:50%;
+    background:var(--navy);color:#fff;
+    display:grid;place-items:center;font-weight:800;
+    margin-bottom:14px;font-size:1rem;
+  }
+  .step__num::before{content:counter(step);}
+  .step h3{font-size:1rem;margin-bottom:6px;}
+  .step p{font-size:.9rem;color:var(--muted);margin:0;}
+
+  /* ---------- Guides ---------- */
+  .guide{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 24px;box-shadow:var(--shadow);margin-bottom:16px;
+  }
+  .guide h3{margin-bottom:10px;font-size:1.02rem;}
+  .guide ol{margin:0;padding-left:20px;color:#3d4d5e;font-size:.92rem;}
+  .guide ol li{margin-bottom:6px;}
+  .guide ol li:last-child{margin-bottom:0;}
+
+  /* ---------- Pricing ---------- */
+  .price-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;
+  }
+  .price-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  }
+  .price-card--featured{border-color:var(--accent);box-shadow:0 12px 32px rgba(10,154,118,.16);}
+  .price-card h3{font-size:1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-size:.78rem;font-weight:800;margin-bottom:12px;}
+  .price{font-size:2.1rem;font-weight:800;color:var(--navy);line-height:1;letter-spacing:-.02em;}
+  .price small{font-size:.85rem;font-weight:600;color:var(--muted);letter-spacing:0;}
+  .price-card ul{list-style:none;margin:18px 0 22px;padding:0;display:grid;gap:9px;flex:1;}
+  .price-card li{font-size:.88rem;color:#3d4d5e;display:flex;gap:9px;align-items:flex-start;}
+  .price-note{
+    margin-top:22px;font-size:.83rem;color:var(--muted);
+    background:var(--warn);border:1px solid var(--warn-line;border-radius:12px;
+    padding:14px 18px;
+  }
+  .price-note{border-color:var(--warn-line);}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:840px;margin-inline:auto;}
+  .faq details{
+    background:#fff;border:1px solid var(--line);border-radius:12px;
+    margin-bottom:12px;box-shadow:0 2px 8px rgba(11,37,69,.04);
+    overflow:hidden;
+  }
+  .faq summary{
+    list-style:none;cursor:pointer;padding:18px 52px 18px 22px;
+    font-weight:700;color:var(--navy);font-size:.97rem;position:relative;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{
+    content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);
+    font-size:1.4rem;font-weight:400;color:var(--blue);line-height:1;
+  }
+  .faq details[open] summary::after{content:"–";}
+  .faq summary:focus-visible{outline:3px solid #7fb2ff;outline-offset:-3px;}
+  .faq .faq__body{padding:0 22px 20px;color:#3d4d5e;font-size:.92rem;}
+  .faq .faq__body p:last-child{margin-bottom:0;}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,52px);align-items:start;
+  }
+  .contact-list{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:18px;}
+  .contact-list li{display:flex;gap:14px;align-items:flex-start;}
+  .contact-list .card__icon{margin:0;width:38px;height:38px;border-radius:10px;font-size:.9rem;}
+  .contact-list strong{display:block;color:var(--navy);font-size:.9rem;}
+  .contact-list span,.contact-list a{font-size:.9rem;color:var(--muted);text-decoration:none;}
+  .contact-list a:hover{text-decoration:underline;color:var(--blue);}
+  .contact-list .big{font-size:1.14rem;font-weight:800;color:var(--navy);}
+
+  .form-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px;box-shadow:var(--shadow-lg);
+  }
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:.84rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+  .field .req{color:#c0392b;}
+  .field input,.field select,.field textarea{
+    width:100%;padding:12px 14px;font-size:.94rem;font-family:inherit;color:var(--ink);
+    border:1px solid #cfdae8;border-radius:10px;background:#fbfdff;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,95,180,.15);background:#fff;
+  }
+  .field textarea{resize:vertical;min-height:104px;}
+  .form-consent{display:flex;gap:10px;align-items:flex-start;margin-bottom:18px;}
+  .form-consent input{width:auto;margin-top:4px;flex-shrink:0;}
+  .form-consent label{font-size:.8rem;color:var(--muted);font-weight:500;margin:0;line-height:1.5;}
+  .form-msg{
+    display:none;margin-top:16px;padding:14px 16px;border-radius:10px;
+    font-size:.88rem;background:#e8f7f1;border:1px solid #bfe8db;color:#075c46;
+  }
+  .form-msg.is-visible{display:block;}
+
+  /* ---------- Footer ---------- */
+  .site-footer{background:var(--navy);color:#b9cbe2;font-size:.87rem;padding-top:52px;}
+  .footer-grid{
+    display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px;
+    padding-bottom:38px;
+  }
+  .site-footer h4{
+    color:#fff;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;
+    margin-bottom:14px;
+  }
+  .site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;}
+  .site-footer a{color:#b9cbe2;text-decoration:none;}
+  .site-footer a:hover{color:#fff;text-decoration:underline;}
+  .site-footer button.linkish{
+    background:none;border:0;padding:0;font:inherit;color:#b9cbe2;cursor:pointer;text-align:left;
+  }
+  .site-footer button.linkish:hover{color:#fff;text-decoration:underline;}
+  .footer-brand .brand__text strong{color:#fff;}
+  .footer-brand .brand__text small{color:#8fa9c8;}
+  .footer-brand p{margin:14px 0 0;font-size:.83rem;line-height:1.6;color:#a3b8d2;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    padding:20px 0 28px;
+    display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;
+    font-size:.79rem;color:#8fa9c8;
+  }
+  .footer-bottom p{margin:0;}
+  .disclaimer-box{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:12px;padding:16px 20px;margin-bottom:28px;
+    font-size:.79rem;line-height:1.6;color:#a3b8d2;
+  }
+  .disclaimer-box strong{color:#dce8f7;}
+
+  /* ---------- Dialog ---------- */
+  dialog{
+    border:0;border-radius:16px;padding:0;max-width:720px;width:calc(100% - 32px);
+    box-shadow:0 30px 70px rgba(0,0,0,.3);color:var(--ink);
+  }
+  dialog::backdrop{background:rgba(11,37,69,.55);}
+  .dlg__head{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:20px 24px;border-bottom:1px solid var(--line);
+    position:sticky;top:0;background:#fff;border-radius:16px 16px 0 0;
+  }
+  .dlg__head h3{margin:0;font-size:1.06rem;}
+  .dlg__close{
+    background:#f0f4f9;border:0;width:34px;height:34px;border-radius:50%;
+    font-size:1.1rem;cursor:pointer;color:var(--navy);line-height:1;flex-shrink:0;
+  }
+  .dlg__close:hover{background:#e2eaf4;}
+  .dlg__body{padding:22px 24px 28px;max-height:65vh;overflow:auto;font-size:.9rem;color:#3d4d5e;}
+  .dlg__body h4{font-size:.92rem;margin:18px 0 6px;color:var(--navy);}
+  .dlg__body h4:first-child{margin-top:0;}
+  .dlg__body ul{padding-left:20px;margin:0 0 12px;}
+  .dlg__body li{margin-bottom:5px;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:980px){
+    .nav{display:none;}
+    .hero__grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .trust__grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    .topbar__inner{justify-content:center;text-align:center;}
+    .topbar__note{font-size:.74rem;}
+    .header__inner{flex-wrap:wrap;gap:12px;}
+    .btn--call{padding:9px 14px;width:100%;justify-content:center;}
+    .btn--call .btn__label{font-size:.92rem;}
+    .trust__grid{grid-template-columns:1fr;gap:14px;}
+    .footer-grid{grid-template-columns:1fr;gap:26px;}
+    .hero__actions .btn{width:100%;justify-content:center;}
+    .brand__text small{display:none;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body id="top">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <p class="topbar__note">
+      Independent third-party support provider — not affiliated with, endorsed by, or sponsored by any device, software, or brand manufacturer.
+    </p>
+    <a class="topbar__phone" href="tel:+18885622563">Call now: <strong>+1 (888) 562-2563</strong></a>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="AssistHub Online Services — home">
+      <span class="brand__mark" aria-hidden="true">HG</span>
+      <span class="brand__text">
+        <strong>Help &amp; Guide Center</strong>
+        <small>AssistHub Online Services</small>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#topics">Help Topics</a>
+      <a href="#how">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="btn btn--call" href="tel:+18885622563">
+      <svg class="phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span class="btn__label">
+        <small>Toll-free support</small>
+        +1 (888) 562-2563
+      </span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <span class="eyebrow">Help &amp; Guide Center</span>
+        <h1>Free step-by-step guides — plus real people on the phone.</h1>
+        <p class="lead">
+          Find clear answers to common account, device, email, and software questions — or call
+          our support team at <strong>+1 (888) 562-2563</strong> and speak with a live agent.
+          No chatbots, no runaround.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="tel:+18885622563">
+            <svg class="phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Call +1 (888) 562-2563
+          </a>
+          <a class="btn btn--ghost" href="#topics">Browse free guides</a>
+        </div>
+
+        <p class="hero__fine">
+          Calls are answered by AssistHub Online Services, an independent third-party provider.
+          Pricing is quoted before any work begins. See our
+          <a href="#pricing">pricing</a> and
+          <button class="linkish" type="button" onclick="openPolicy('refund')" style="background:none;border:0;padding:0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer;">refund policy</button>.
+        </p>
+      </div>
+
+      <aside class="hero__card" aria-label="Speak with support">
+        <h3>Talk to a live agent</h3>
+        <p class="card-sub">Average wait time under 2 minutes.</p>
+
+        <div class="callout">
+          <div>
+            <strong>Toll-free support line</strong>
+            <span>Available 24 hours a day, 7 days a week.</span>
+            <a class="callout__num" href="tel:+18885622563">+1 (888) 562-2563</a>
+          </div>
+        </div>
+
+        <ul class="mini-list">
+          <li><span class="tick" aria-hidden="true">✓</span> Free, no-obligation diagnosis of your issue</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Clear price quoted before any work starts</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Cancel anytime — see our refund policy</li>
+          <li><span class="tick" aria-hidden="true">✓</span> English-speaking support agents</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="trust" aria-label="Why customers choose us">
+    <div class="wrap trust__grid">
+      <div class="trust__item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        <div><strong>Upfront pricing</strong><span>You approve the price before we begin.</span></div>
+      </div>
+      <div class="trust__item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div><strong>Privacy respected</strong><span>We never ask for your passwords.</span></div>
+      </div>
+      <div class="trust__item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div><strong>Real human agents</strong><span>No automated phone trees.</span></div>
+      </div>
+      <div class="trust__item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><strong>24/7 availability</strong><span>Call whenever it suits you.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HELP TOPICS ============ -->
+  <section class="section" id="topics">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>What we can help you with</h2>
+        <p>Start with a free guide below, or call <a href="tel:+18885622563">+1 (888) 562-2563</a> if you'd rather have an agent walk you through it.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Account &amp; sign-in issues</h3>
+          <p>Locked out, forgotten password, two-factor codes not arriving, or a suspended account.</p>
+          <a class="card__link" href="#guides">Read the guide →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Device &amp; printer setup</h3>
+          <p>Getting a new computer, printer, or router connected and working on your network.</p>
+          <a class="card__link" href="#guides">Read the guide →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </div>
+          <h3>Email &amp; app problems</h3>
+          <p>Email not syncing, apps crashing, notifications missing, or settings that won't stick.</p>
+          <a class="card__link" href="#guides">Read the guide →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+          </div>
+          <h3>Software install &amp; updates</h3>
+          <p>Installation errors, failed updates, compatibility messages, and driver conflicts.</p>
+          <a class="card__link" href="#guides">Read the guide →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>
+          </div>
+          <h3>Backup &amp; data transfer</h3>
+          <p>Moving files to a new device, setting up automatic backups, or recovering lost files.</p>
+          <a class="card__link" href="#guides">Read the guide →</a>
+        </article>
+
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          </div>
+          <h3>Billing &amp; subscription questions</h3>
+          <p>Questions about a charge on your statement, renewal dates, or cancelling a plan.</p>
+          <a class="card__link" href="#contact">Contact billing →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section section--alt" id="how">
+    <div class="wrap">
+      <div class="section__head center">
+        <h2>How our phone support works</h2>
+        <p>Four simple steps — and you'll always know the price before we start.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step__num" aria-hidden="true"></div>
+          <h3>Call us</h3>
+          <p>Dial <a href="tel:+18885622563">+1 (888) 562-2563</a> and speak with a live agent. No menus, no waiting on hold music.</p>
+        </div>
+        <div class="step">
+          <div class="step__num" aria-hidden="true"></div>
+          <h3>Describe the issue</h3>
+          <p>Tell us what's happening. The initial diagnosis is free and there's no obligation to continue.</p>
+        </div>
+        <div class="step">
+          <div class="step__num" aria-hidden="true"></div>
+          <h3>Approve the price</h3>
+          <p>We quote a flat price for the fix. Nothing is charged until you say yes — in writing or on the call.</p>
+        </div>
+        <div class="step">
+          <div class="step__num" aria-hidden="true"></div>
+          <h3>Get it resolved</h3>
+          <p>We work the issue with you until it's fixed, or you're covered by our <button class="linkish" type="button" onclick="openPolicy('refund')" style="background:none;border:0;padding:0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer;">refund policy</button>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FREE GUIDES ============ -->
+  <section class="section" id="guides">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Free self-help guides</h2>
+        <p>Short, accurate, and written for non-technical users. If a step doesn't work, call us and we'll take it from there.</p>
+      </div>
+
+      <div style="max-width:840px;">
+        <article class="guide">
+          <h3>Guide 1 — You can't sign in to your account</h3>
+          <ol>
+            <li>Check that Caps Lock is off and that the email address is spelled exactly as registered.</li>
+            <li>Use the <strong>“Forgot password”</strong> link and check both your inbox and spam folder for the reset email (it can take up to 10 minutes).</li>
+            <li>If you use two-factor authentication, make sure your device's clock is set to automatic — a drifting clock is the most common cause of rejected codes.</li>
+            <li>Try a different browser or a private/incognito window to rule out cached data.</li>
+            <li>Still locked out? Call <a href="tel:+18885622563">+1 (888) 562-2563</a> — we'll help you work through the recovery options.</li>
+          </ol>
+        </article>
+
+        <article class="guide">
+          <h3>Guide 2 — Your printer won't connect</h3>
+          <ol>
+            <li>Confirm the printer and the computer are on the <strong>same Wi‑Fi network</strong> (a 2.4&nbsp;GHz vs 5&nbsp;GHz mismatch is a frequent culprit).</li>
+            <li>Power-cycle in order: printer off → router off for 30 seconds → router on → printer on.</li>
+            <li>On your computer, remove the printer from your device list, then add it again as a new device.</li>
+            <li>Download the current driver from the printer manufacturer's official website — not a third-party driver site.</li>
+            <li>If it still won't appear, call us and we'll diagnose the network side of the problem.</li>
+          </ol>
+        </article>
+
+        <article class="guide">
+          <h3>Guide 3 — Email isn't syncing on your phone</h3>
+          <ol>
+            <li>Turn off any battery-saver or “data saver” mode, which can block background sync.</li>
+            <li>Check that the account's sync setting is enabled for Mail in your device settings.</li>
+            <li>Remove the account and re-add it — you'll need your email password and, if enabled, your app password.</li>
+            <li>If you recently changed your email password, update it on the device as well; an old password silently blocks sync.</li>
+            <li>No luck? Call <a href="tel:+18885622563">+1 (888) 562-2563</a> and we'll walk through the server settings with you.</li>
+          </ol>
+        </article>
+
+        <article class="guide">
+          <h3>Guide 4 — Preparing a device for backup or transfer</h3>
+          <ol>
+            <li>Free up at least 20% of your storage before starting — transfers fail on full drives.</li>
+            <li>Connect to power and to a stable Wi‑Fi network; avoid mobile hotspots for large transfers.</li>
+            <li>Write down (or export) your list of installed applications before you move anything.</li>
+            <li>Run a test restore of a single small folder to confirm the backup actually works.</li>
+            <li>For a full migration, call us to schedule a guided session at a quoted flat rate.</li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="section section--alt" id="pricing">
+    <div class="wrap">
+      <div class="section__head center">
+        <h2>Transparent, flat-rate pricing</h2>
+        <p>No hourly meters, no surprise charges. You approve the exact price before any work begins.</p>
+      </div>
+
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Diagnostic</h3>
+          <div class="price">$0 <small>free</small></div>
+          <ul>
+            <li><span class="tick" aria-hidden="true">✓</span> Phone-based issue review</li>
+            <li><span class="tick" aria-hidden="true">✓</span> Plain-English explanation</li>
+            <li><span class="tick" aria-hidden="true">✓</span> No obligation to continue</li>
+            <li><span class="tick" aria-hidden="true">✓</span> Free self-help guide links</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="tel:+18885622563">Call for diagnosis</a>
+        </div>
+
+        <div class="price-card price-card--featured">
+          <h3>Single Issue</h3>
+          <div class="price">$49 <small>flat</small></div>
+          <ul>
+            <li><span class="tick" aria-hidden="true">✓</span> One issue, resolved end-to-end</li>
+            <li><span class="tick" aria-hidden="true">✓</span> Up to 60 minutes of agent time</li>
+            <li><span class="tick" aria-hidden="true">✓</span> Written summary after the call</li>
+            <li><span class="tick" aria-hidden="true">✓</span> Covered by our refund policy</li>
+          </ul>
+          <a class="btn btn--primary btn--block" href="tel:+18885622563">Call +1 (888) 562-2563</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Guided Session</h3>
+          <div class="price">$89 <small>per session</small></div>
+          <ul>
+            <li><span class="tick" aria-hidden="true">✓</span> Up to 90 minutes with an agent</li>
+            <li><span class="tick" aria-hidden="true">✓</span> Setup, migration, or multi-step fixes</li>
+            <li><span class="tick" aria-hidden="true">✓</span> Follow-up call included for 7 days</li>
+            <li><span class="tick" aria-hidden="true">✓</span> Covered by our refund policy</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="tel:+18885622563">Book a session</a>
+        </div>
+      </div>
+
+      <p class="price-note">
+        <strong>Please read:</strong> All prices are in US dollars and are quoted and approved before work begins.
+        Prices shown are typical starting rates and may vary based on the complexity of your issue — the final price is
+        always confirmed with you on the call before any charge is made. We do not sell, resell, or supply any software
+        licenses, subscriptions, or manufacturer warranties. See our
+        <button class="linkish" type="button" onclick="openPolicy('refund')" style="background:none;border:0;padding:0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer;">Refund &amp; Cancellation Policy</button>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section__head center">
+        <h2>Frequently asked questions</h2>
+        <p>Can't find your answer? Call <a href="tel:+18885622563">+1 (888) 562-2563</a>.</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>Is AssistHub Online Services an official company help desk?</summary>
+          <div class="faq__body">
+            <p>No. We are an <strong>independent, third-party support provider</strong>. We are not affiliated with, endorsed by, sponsored by, or acting on behalf of any device manufacturer, software publisher, internet provider, or brand. Any brand names mentioned on this site are used only to describe the type of issue we can help with.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How much will support cost?</summary>
+          <div class="faq__body">
+            <p>The initial diagnosis is free. If you want us to fix the issue, we quote a flat price for that specific job, and no charge is made until you approve it. Our typical starting rates are listed in the <a href="#pricing">Pricing</a> section.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Will you ever ask for my password?</summary>
+          <div class="faq__body">
+            <p>No. Our agents will never ask you for your account password, PIN, or full payment card number over the phone. If anyone claiming to be from AssistHub asks for that information, hang up and call our published number, <a href="tel:+18885622563">+1 (888) 562-2563</a>, to verify.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What are your support hours?</summary>
+          <div class="faq__body">
+            <p>Our phone line is staffed 24 hours a day, 7 days a week, including holidays. Email and web form requests are typically answered within one business day.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I get a refund if my issue isn't resolved?</summary>
+          <div class="faq__body">
+            <p>Yes. If we can't resolve the issue you paid us to fix, you're entitled to a full refund of that service fee under our <button class="linkish" type="button" onclick="openPolicy('refund')" style="background:none;border:0;padding:0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer;">Refund &amp; Cancellation Policy</button>. Refund requests must be made within 30 days of the service date.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do you sell software or subscriptions?</summary>
+          <div class="faq__body">
+            <p>No. We provide help and guidance only. We do not sell software licenses, antivirus subscriptions, extended warranties, or any manufacturer product. If you need a license or subscription, you should purchase it directly from the relevant publisher or retailer.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How is my personal information handled?</summary>
+          <div class="faq__body">
+            <p>We collect only what we need to provide the service — typically your name, phone number, email, and a description of the issue. We don't sell your data. Full details are in our <button class="linkish" type="button" onclick="openPolicy('privacy')" style="background:none;border:0;padding:0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer;">Privacy Policy</button>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I cancel a scheduled session?</summary>
+          <div class="faq__body">
+            <p>Call <a href="tel:+18885622563">+1 (888) 562-2563</a> or email <a href="mailto:support@example.com">support@example.com</a> at least 24 hours before your scheduled time and there's no charge. Cancellations inside 24 hours may be subject to a fee as described in our Refund &amp; Cancellation Policy.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I file a complaint?</summary>
+          <div class="faq__body">
+            <p>Email <a href="mailto:support@example.com">support@example.com</a> with the subject line “Complaint” and your call reference number, or write to us at the postal address in the footer. We acknowledge complaints within 2 business days and aim to resolve them within 10 business days.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section--alt" id="contact">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Contact us</h2>
+        <p>Phone is the fastest way to reach us. You can also request a callback using the form.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <ul class="contact-list">
+            <li>
+              <div class="card__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <strong>Support phone (toll-free)</strong>
+                <a class="big" href="tel:+18885622563">+1 (888) 562-2563</a>
+                <span>Open 24 hours a day, 7 days a week</span>
+              </div>
+            </li>
+            <li>
+              <div class="card__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:support@example.com">support@example.com</a>
+                <span>Replies within 1 business day</span>
+              </div>
+            </li>
+            <li>
+              <div class="card__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Postal address</strong>
+                <span>AssistHub Online Services<br>1200 Commerce Parkway, Suite 210<br>Austin, TX 78701, United States</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="callout" style="margin-bottom:0;">
+            <div>
+              <strong>Need help right now?</strong>
+              <span>Skip the form and speak to an agent in under two minutes.</span>
+              <a class="callout__num" href="tel:+18885622563">+1 (888) 562-2563</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Request a callback</h3>
+          <p style="font-size:.86rem;color:var(--muted);">Leave your details and we'll call you back. Fields marked <span class="req">*</span> are required.</p>
+
+          <!-- Replace action/method with your real form endpoint before running ads. -->
+          <form id="callbackForm" novalidate>
+            <div class="field">
+              <label for="name">Full name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 123-4567" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="topic">What do you need help with? <span class="req">*</span></label>
+              <select id="topic" name="topic" required>
+                <option value="">Please choose…</option>
+                <option>Account &amp; sign-in</option>
+                <option>Device or printer setup</option>
+                <option>Email or app issue</option>
+                <option>Software install / update</option>
+                <option>Backup or data transfer</option>
+                <option>Billing &amp; subscription question</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Brief description (optional)</label>
+              <textarea id="message" name="message" placeholder="Tell us what's happening — a sentence or two is fine."></textarea>
+            </div>
+
+            <div class="form-consent">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">
+                I agree to be contacted about my request and I have read the
+                <button type="button" class="linkish" onclick="openPolicy('privacy')" style="background:none;border:0;padding:0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer;">Privacy Policy</button>.
+                <span class="req">*</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--dark btn--block">Request callback</button>
+
+            <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+
+    <div class="disclaimer-box">
+      <strong>Important disclosure:</strong> AssistHub Online Services is an independent third-party provider of
+      technical help and guidance. We are <strong>not</strong> affiliated with, endorsed by, sponsored by, or
+      authorized by any device manufacturer, software publisher, internet service provider, or brand. Brand names,
+      product names, and logos referenced anywhere on this site are the property of their respective owners and are
+      used solely to describe the type of issue we can assist with. We do not sell software licenses, subscriptions,
+      or warranties. Results vary depending on the specific issue and your device or account.
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" style="text-decoration:none;">
+          <span class="brand__mark" aria-hidden="true">HG</span>
+          <span class="brand__text">
+            <strong>Help &amp; Guide Center</strong>
+            <small>AssistHub Online Services</small>
+          </span>
+        </a>
+        <p>
+          1200 Commerce Parkway, Suite 210<br>
+          Austin, TX 78701, United States<br><br>
+          Phone: <a href="tel:+18885622563">+1 (888) 562-2563</a><br>
+          Email: <a href="mailto:support@example.com">support@example.com</a>
+        </p>
+      </div>
+
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#topics">Help topics</a></li>
+          <li><a href="#guides">Free guides</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact us</a></li>
+          <li><a href="#contact">Request a callback</a></li>
+          <li><a href="tel:+18885622563">+1 (888) 562-2563</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><button class="linkish" type="button" onclick="openPolicy('privacy')">Privacy Policy</button></li>
+          <li><button class="linkish" type="button" onclick="openPolicy('terms')">Terms of Service</button></li>
+          <li><button class="linkish" type="button" onclick="openPolicy('refund')">Refund &amp; Cancellation</button></li>
+          <li><button class="linkish" type="button" onclick="openPolicy('disclaimer')">Disclaimer</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2025</span> AssistHub Online Services. All rights reserved.</p>
+      <p>Page last updated: <span id="updated">—</span></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ POLICY DIALOGS ============ -->
+<dialog id="dlg-privacy" aria-labelledby="dlg-privacy-title">
+  <div class="dlg__head">
+    <h3 id="dlg-privacy-title">Privacy Policy</h3>
+    <button class="dlg__close" type="button" aria-label="Close" onclick="closePolicy('privacy')">&times;</button>
+  </div>
+  <div class="dlg__body">
+    <p><em>Last updated: <span class="js-updated">—</span></em></p>
+    <h4>1. Who we are</h4>
+    <p>AssistHub Online Services (“we”, “us”) operates this website and provides independent third-party technical help by phone and email. Our postal address is 1200 Commerce Parkway, Suite 210, Austin, TX 78701, United States.</p>
+    <h4>2. Information we collect</h4>
+    <ul>
+      <li>Contact details you give us: name, phone number, email address, and any message you send.</li>
+      <li>Call records: date, time, and duration of calls for quality and billing purposes.</li>
+      <li>Basic website analytics: pages viewed, approximate region, browser type.</li>
+    </ul>
+    <h4>3. How we use it</h4>
+    <ul>
+      <li>To respond to your request and provide the support service.</li>
+      <li>To process payments and honour refunds.</li>
+      <li>To improve our service and meet legal obligations.</li>
+    </ul>
+    <h4>4. What we never do</h4>
+    <p>We do not ask for your account passwords or PINs, and we do not sell your personal information to third parties.</p>
+    <h4>5. Sharing</h4>
+    <p>We share data only with service providers who help us operate (for example, payment processing and telephony), and only to the extent needed. We may disclose information where required by law.</p>
+    <h4>6. Retention</h4>
+    <p>We keep contact and billing records for as long as needed to provide the service and to satisfy tax and legal requirements, then delete or anonymise them.</p>
+    <h4>7. Your rights</h4>
+    <p>You may request access to, correction of, or deletion of your personal information by emailing <a href="mailto:support@example.com">support@example.com</a>. We respond within 30 days.</p>
+    <h4>8. Cookies</h4>
+    <p>This site uses only essential cookies and, where enabled, basic analytics cookies. You can block cookies in your browser settings.</p>
+    <h4>9. Contact</h4>
+    <p>Questions about this policy: <a href="mailto:support@example.com">support@example.com</a> or <a href="tel:+18885622563">+1 (888) 562-2563</a>.</p>
+  </div>
+</dialog>
+
+<dialog id="dlg-terms" aria-labelledby="dlg-terms-title">
+  <div class="dlg__head">
+    <h3 id="dlg-terms-title">Terms of Service</h3>
+    <button class="dlg__close" type="button" aria-label="Close" onclick="closePolicy('terms')">&times;</button>
+  </div>
+  <div class="dlg__body">
+    <p><em>Last updated: <span class="js-updated">—</span></em></p>
+    <h4>1. Independent provider</h4>
+    <p>AssistHub Online Services is an independent third-party provider of technical help and guidance. We are not affiliated with, endorsed by, or sponsored by any device manufacturer, software publisher, or brand. We do not provide manufacturer warranty service.</p>
+    <h4>2. The service</h4>
+    <p>We provide remote assistance by telephone and email. We do not sell software licenses, subscriptions, or hardware. Any software you install remains governed by its publisher's own terms.</p>
+    <h4>3. Pricing and payment</h4>
+    <p>The initial diagnosis is free. Before any charge, we quote a flat price for the specific job, which you must approve. Prices are in US dollars and include applicable taxes unless stated otherwise.</p>
+    <h4>4. Your responsibilities</h4>
+    <ul>
+      <li>Provide accurate information about the issue and the device or account involved.</li>
+      <li>Keep a backup of your data. You are responsible for your own data and backups.</li>
+      <li>Do not ask us to perform anything unlawful or to bypass licensing or security controls.</li>
+    </ul>
+    <h4>5. No guarantee of outcome</h4>
+    <p>We use reasonable skill and care, but we cannot guarantee that every issue can be resolved — some faults are hardware failures or third-party outages outside our control. Where we cannot resolve the issue you paid us for, our <button class="linkish" type="button" onclick="closePolicy('terms');openPolicy('refund')" style="background:none;border:0;padding:0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer;">Refund &amp; Cancellation Policy</button> applies.</p>
+    <h4>6. Limitation of liability</h4>
+    <p>To the maximum extent permitted by law, our total liability for any claim is limited to the amount you paid us for the specific service giving rise to the claim. We are not liable for indirect or consequential loss, including lost data or lost profits.</p>
+    <h4>7. Cancellations</h4>
+    <p>Scheduled sessions may be cancelled free of charge up to 24 hours before the agreed time. See the Refund &amp; Cancellation Policy for details.</p>
+    <h4>8. Governing law</h4>
+    <p>These terms are governed by the laws of the State of Texas, United States, without regard to conflict-of-law rules.</p>
+    <h4>9. Contact</h4>
+    <p><a href="mailto:support@example.com">support@example.com</a> · <a href="tel:+18885622563">+1 (888) 562-2563</a> · 1200 Commerce Parkway, Suite 210, Austin, TX 78701, United States.</p>
+  </div>
+</dialog>
+
+<dialog id="dlg-refund" aria-labelledby="dlg-refund-title">
+  <div class="dlg__head">
+    <h3 id="dlg-refund-title">Refund &amp; Cancellation Policy</h3>
+    <button class="dlg__close" type="button" aria-label="Close" onclick="closePolicy('refund')">&times;</button>
+  </div>
+  <div class="dlg__body">
+    <p><em>Last updated: <span class="js-updated">—</span></em></p>
+    <h4>1. Free diagnosis</h4>
+    <p>The initial diagnosis costs nothing. You are never charged unless you explicitly approve a quoted price.</p>
+    <h4>2. Full refund if we can't fix it</h4>
+    <p>If we are unable to resolve the specific issue you paid us to fix, you are entitled to a full refund of that service fee. Request it within <strong>30 days</strong> of the service date.</p>
+    <h4>3. How to request a refund</h4>
+    <ul>
+      <li>Call <a href="tel:+18885622563">+1 (888) 562-2563</a>, or</li>
+      <li>Email <a href="mailto:support@example.com">support@example.com</a> with the subject “Refund Request” and your call reference number.</li>
+    </ul>
+    <p>Approved refunds are returned to the original payment method within 5–10 business days.</p>
+    <h4>4. Cancelling a scheduled session</h4>
+    <p>Cancel at least <strong>24 hours</strong> before the scheduled time and there is no charge. Cancellations made with less than 24 hours' notice may incur a fee of up to 50% of the quoted price to cover reserved agent time.</p>
+    <h4>5. What is not refundable</h4>
+    <ul>
+      <li>Services already fully delivered and confirmed resolved by you.</li>
+      <li>Issues caused by hardware failure or a third-party outage identified during the session.</li>
+      <li>Requests outside the 30-day window.</li>
+    </ul>
+    <h4>6. Complaints</h4>
+    <p>If you're unhappy with a refund decision, email <a href="mailto:support@example.com">support@example.com</a> with the subject “Complaint”. We acknowledge complaints within 2 business days and aim to resolve them within 10 business days.</p>
+  </div>
+</dialog>
+
+<dialog id="dlg-disclaimer" aria-labelledby="dlg-disclaimer-title">
+  <div class="dlg__head">
+    <h3 id="dlg-disclaimer-title">Disclaimer</h3>
+    <button class="dlg__close" type="button" aria-label="Close" onclick="closePolicy('disclaimer')">&times;</button>
+  </div>
+  <div class="dlg__body">
+    <h4>Third-party status</h4>
+    <p>AssistHub Online Services is an independent third-party provider of technical help and guidance. We are not affiliated with, endorsed by, sponsored by, or authorized by any device manufacturer, software publisher, internet service provider, or brand.</p>
+    <h4>Trademarks</h4>
+    <p>All brand names, product names, and logos referenced on this website are the property of their respective owners and are used solely for descriptive purposes to indicate the type of issue we can assist with.</p>
+    <h4>No software sales</h4>
+    <p>We do not sell, resell, or distribute software licenses, subscriptions, extended warranties, or manufacturer support contracts.</p>
+    <h4>Results</h4>
+    <p>Help outcomes vary depending on the specific issue and the condition of your device or account. We do not guarantee that every issue can be resolved.</p>
+    <h4>Content accuracy</h4>
+    <p>Our free guides are provided for general information only. Menu names and steps may differ between software versions and devices. For issues you are unsure about, call us at <a href="tel:+18885622563">+1 (888) 562-2563</a>.</p>
+  </div>
+</dialog>
+
+<script>
+  /* ---------- Footer date ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const dateStr = new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+  document.getElementById('updated').textContent = dateStr;
+  document.querySelectorAll('.js-updated').forEach(el => el.textContent = dateStr);
+
+  /* ---------- Policy dialogs ---------- */
+  function openPolicy(key){
+    const dlg = document.getElementById('dlg-' + key);
+    if (dlg && typeof dlg.showModal === 'function') {
+      dlg.showModal();
+    } else if (dlg) {
+      dlg.setAttribute('open','');
+    }
+  }
+  function closePolicy(key){
+    const dlg = document.getElementById('dlg-' + key);
+    if (dlg) dlg.close();
+  }
+  document.querySelectorAll('dialog').forEach(dlg => {
+    dlg.addEventListener('click', e => {
+      const r = dlg.getBoundingClientRect();
+      const outside = e.clientX < r.left || e.clientX > r.right ||
+                      e.clientY < r.top  || e.clientY > r.bottom;
+      if (outside) dlg.close();
+    });
+  });
+
+  /* ---------- Callback form ----------
+     DEMO HANDLER ONLY.
+     Before running ads, replace this with a real POST to your backend
+     (or a CRM / form service endpoint) so submissions are actually received
+     and confirmed by email. Google Ads reviewers test forms.            */
+  const form = document.getElementById('callbackForm');
+  const msg  = document.getElementById('formMsg');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // TODO: replace with real submission, e.g.:
+    // fetch('/api/callback', { method:'POST', body:new FormData(form) })
+
+    msg.textContent = 'Thank you — your callback request has been received. An agent will call you shortly. '
+                    + 'For immediate help, call +1 (888) 562-2563.';
+    msg.classList.add('is-visible');
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
